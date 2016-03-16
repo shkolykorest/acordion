@@ -112,6 +112,60 @@
             </div>
             <?php } ?>
           </div>
+		  
+		  <!--start acordion -->
+		  <ul class="accordion">
+		  <?if(!empty($description1)){?>
+		   <li class="accordion_item">
+			  <label class="accordion_trigger" for="toggle-05">СТОИМОСТЬ ЗВОНКОВ</label><input id="toggle-05" class="accordion_toggle" type="checkbox" checked="checked">
+			  <div class="accordion_target">
+				 <?php echo $description1;?>
+			  </div>
+		   </li>
+		   <?php }?>
+		   <?if(!empty($description2)){?>
+		   <li class="accordion_item">
+			  <label class="accordion_trigger" for="toggle-06">ИНТЕРНЕТ ОПЦИИ</label><input id="toggle-06" class="accordion_toggle" type="checkbox" checked="checked">
+			  <div class="accordion_target">
+				 <?php echo $description2;?>
+			  </div>
+		   </li>
+		   <?php }?>
+		   <?if(!empty($description3)){?>
+		   <li class="accordion_item">
+			  <label class="accordion_trigger" for="toggle-07">СМС ОПЦИИ</label><input id="toggle-07" class="accordion_toggle" type="checkbox" checked="checked">
+			  <div class="accordion_target">
+				 <?php echo $description3;?>
+			  </div>
+		   </li>
+		   <?php }?>
+		   <?if(!empty($description4)){?>
+		   <li class="accordion_item">
+			  <label class="accordion_trigger" for="toggle-08">ОПЦИИ МЕЖДУНАРОДНОЙ СВЯЗИ</label><input id="toggle-08" class="accordion_toggle" type="checkbox">
+			  <div class="accordion_target">
+				 <?php echo $description4;?>
+			  </div>
+		   </li>
+		   <?php }?>
+		   <?if(!empty($description5)){?>
+		   <li class="accordion_item">
+			  <label class="accordion_trigger" for="toggle-09">ДОПОЛНИТЕЛЬНЫЕ ОПЦИИ</label><input id="toggle-09" class="accordion_toggle" type="checkbox">
+			  <div class="accordion_target">
+				 <?php echo $description5;?>
+			  </div>
+		   </li>
+		   <?php }?>
+		   <?if(!empty($description6)){?>
+		   <li class="accordion_item">
+			  <label class="accordion_trigger" for="toggle-10">ПРИМЕЧАНИЯ</label><input id="toggle-10" class="accordion_toggle" type="checkbox">
+			  <div class="accordion_target">
+				 <?php echo $description6;?>
+			  </div>
+		   </li>
+		   <?php }?>
+		</ul>
+		  <!--end acordion -->
+		  
         </div>
         <?php if ($column_left || $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>

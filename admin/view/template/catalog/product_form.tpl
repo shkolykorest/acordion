@@ -57,12 +57,51 @@
                       <?php } ?>
                     </div>
                   </div>
+				  
                   <div class="form-group">
                     <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>"><?php echo $entry_description; ?></label>
                     <div class="col-sm-10">
                       <textarea name="product_description[<?php echo $language['language_id']; ?>][description]" placeholder="<?php echo $entry_description; ?>" id="input-description<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['description'] : ''; ?></textarea>
                     </div>
                   </div>
+				  
+				  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>">СТОИМОСТЬ ЗВОНКОВ</label>
+                    <div class="col-sm-10">
+                      <textarea name="product_description[<?php echo $language['language_id']; ?>][description1]" placeholder="<?php echo $entry_description; ?>" id="input-description1<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['description1'] : ''; ?></textarea>
+                    </div>
+                  </div>
+				  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>">ИНТЕРНЕТ ОПЦИИ</label>
+                    <div class="col-sm-10">
+                      <textarea name="product_description[<?php echo $language['language_id']; ?>][description2]" placeholder="<?php echo $entry_description; ?>" id="input-description2<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['description2'] : ''; ?></textarea>
+                    </div>
+                  </div>
+				  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>">СМС ОПЦИИ</label>
+                    <div class="col-sm-10">
+                      <textarea name="product_description[<?php echo $language['language_id']; ?>][description3]" placeholder="<?php echo $entry_description; ?>" id="input-description3<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['description3'] : ''; ?></textarea>
+                    </div>
+                  </div>
+				  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>">ОПЦИИ МЕЖДУНАРОДНОЙ СВЯЗИ</label>
+                    <div class="col-sm-10">
+                      <textarea name="product_description[<?php echo $language['language_id']; ?>][description4]" placeholder="<?php echo $entry_description; ?>" id="input-description4<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['description4'] : ''; ?></textarea>
+                    </div>
+                  </div>
+				  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>">ДОПОЛНИТЕЛЬНЫЕ ОПЦИИ</label>
+                    <div class="col-sm-10">
+                      <textarea name="product_description[<?php echo $language['language_id']; ?>][description5]" placeholder="<?php echo $entry_description; ?>" id="input-description5<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['description5'] : ''; ?></textarea>
+                    </div>
+                  </div>
+				  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>">ПРИМЕЧАНИЯ</label>
+                    <div class="col-sm-10">
+                      <textarea name="product_description[<?php echo $language['language_id']; ?>][description6]" placeholder="<?php echo $entry_description; ?>" id="input-description6<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['description6'] : ''; ?></textarea>
+                    </div>
+                  </div>
+				  
                   <div class="form-group">
                     <label class="col-sm-2 control-label" for="input-meta-title<?php echo $language['language_id']; ?>"><?php echo $entry_meta_title; ?></label>
                     <div class="col-sm-10">
@@ -958,8 +997,20 @@
 <?php foreach ($languages as $language) { ?>
 <?php if ($ckeditor) { ?>
 ckeditorInit('input-description<?php echo $language['language_id']; ?>', '<?php echo $token; ?>');
+ckeditorInit('input-description1<?php echo $language['language_id']; ?>', '<?php echo $token; ?>');
+ckeditorInit('input-description2<?php echo $language['language_id']; ?>', '<?php echo $token; ?>');
+ckeditorInit('input-description3<?php echo $language['language_id']; ?>', '<?php echo $token; ?>');
+ckeditorInit('input-description4<?php echo $language['language_id']; ?>', '<?php echo $token; ?>');
+ckeditorInit('input-description5<?php echo $language['language_id']; ?>', '<?php echo $token; ?>');
+ckeditorInit('input-description6<?php echo $language['language_id']; ?>', '<?php echo $token; ?>');
 <?php } else { ?>
 $('#input-description<?php echo $language['language_id']; ?>').summernote({height: 300, lang:'<?php echo $lang; ?>'});
+$('#input-description1<?php echo $language['language_id']; ?>').summernote({height: 150, lang:'<?php echo $lang; ?>'});
+$('#input-description2<?php echo $language['language_id']; ?>').summernote({height: 150, lang:'<?php echo $lang; ?>'});
+$('#input-description3<?php echo $language['language_id']; ?>').summernote({height: 150, lang:'<?php echo $lang; ?>'});
+$('#input-description4<?php echo $language['language_id']; ?>').summernote({height: 150, lang:'<?php echo $lang; ?>'});
+$('#input-description5<?php echo $language['language_id']; ?>').summernote({height: 150, lang:'<?php echo $lang; ?>'});
+$('#input-description6<?php echo $language['language_id']; ?>').summernote({height: 150, lang:'<?php echo $lang; ?>'});
 <?php } ?>
 <?php } ?>
 //--></script>

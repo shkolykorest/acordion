@@ -280,6 +280,12 @@ class ControllerProductProduct extends Controller {
 			$data['reward'] = $product_info['reward'];
 			$data['points'] = $product_info['points'];
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
+			$data['description1'] = html_entity_decode($product_info['description1'], ENT_QUOTES, 'UTF-8');
+			$data['description2'] = html_entity_decode($product_info['description2'], ENT_QUOTES, 'UTF-8');
+			$data['description3'] = html_entity_decode($product_info['description3'], ENT_QUOTES, 'UTF-8');
+			$data['description4'] = html_entity_decode($product_info['description4'], ENT_QUOTES, 'UTF-8');
+			$data['description5'] = html_entity_decode($product_info['description5'], ENT_QUOTES, 'UTF-8');
+			$data['description6'] = html_entity_decode($product_info['description6'], ENT_QUOTES, 'UTF-8');
 
 			if ($product_info['quantity'] <= 0) {
 				$data['stock'] = $product_info['stock_status'];

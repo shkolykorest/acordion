@@ -745,3 +745,54 @@ h2.price {
     background-image: none;
     background-color: #df5c39;
 }
+.accordion {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    list-style: none;
+}
+.accordion_item {
+    border-bottom: 1px solid #AFBB1C;
+    font-size: 0.9em;
+}
+.accordion_trigger {
+    display: block;
+    background-color: #626465;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.accordion_toggle {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.accordion_toggle:checked + .accordion_target {
+    position: static;
+    overflow: visible;
+    width: auto;
+    height: auto;
+    margin: auto;
+    clip: auto;
+    padding: 1.5rem;
+    -webkit-animation: fadeIn ease-in 0.7s;
+    animation: fadeIn ease-in 0.7s;
+}
+.accordion_target {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    background-color: #F1EFEF;
+    color: #444;
+}
